@@ -49,6 +49,14 @@
     }
 }
 
+.moviescard__hidden {
+    visibility: hidden;
+}
+
+.moviescard__visible {
+    visibility: visible;
+}
+
 .moviescard__saved {
     width: 21px;
     height: 21px;
@@ -58,11 +66,29 @@
     right: 14px;
 }
 
+.moviescard__remove {
+    width: 8px;
+    height: 8px;
+    padding: 8px;
+    border-radius: 30px;
+    margin: 0;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: #313131;
+    transition: background-color .5s ease-out;
+}
+
+.moviescard__remove:hover {
+    background-color: #EE3465;
+    cursor: pointer;
+}
+
 .moviescard__save {
     margin: 0;
     padding: 6px 7px;
     position: absolute;
-    top: 40px;
+    top: 14px;
     right: 14px;
     font-style: normal;
     font-weight: normal;

@@ -68,6 +68,10 @@
     .about-project__step {
         margin: 0;
     }
+
+    .about-project__step:last-of-type {
+        margin: 0 0 0 10px;
+    }
 }
 
 @media screen and (min-width: 320px) {

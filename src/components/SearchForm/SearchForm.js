@@ -5,7 +5,7 @@ function SearchForm(props) {
     return (
         <section className="searchform">
             <form className="searchform__bar" onSubmit={props.onSubmit}>
-                <input className="searchform__input" type="text" placeholder="Фильм"/>
+                <input className="searchform__input" type="text" placeholder="Фильм" required/>
                 <button type="submit" className="searchform__button"/>
             </form>
             <FilterCheckBox/>
