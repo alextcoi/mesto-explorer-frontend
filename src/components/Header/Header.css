@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.header_main {
+    display: flex;
+    background-color: #073042;
+}
+
+.header_movies {
+    display: flex;
+    background-color: #202020;
+}
+
+.header_forms {
+    display: none;
+}
