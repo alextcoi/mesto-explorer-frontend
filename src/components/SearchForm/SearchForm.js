@@ -1,14 +1,31 @@
 import './SearchForm.css';
 import FilterCheckBox from '../FilterCheckBox/FilterCheckBox';
+import { useState } from 'react';
 
-function SearchForm(props) {
+function SearchForm({onMovieSearch, onInputClick}) {
+    const [search, setSearch] = useState('');
+
+    function handleSearch(e) {
+        setSearch(e.target.value);
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        onMovieSearch({
+            movie: search,
+        });
+    }
+
     return (
         <section className="searchform">
-            <form className="searchform__bar" onSubmit={props.onSubmit}>
-                <input className="searchform__input" type="text" placeholder="Фильм" required/>
+            <form className="searchform__bar" onSubmit={handleSubmit}>
+                <input className="searchform__input" type="text" placeholder="Фильм" value={search} onChange={handleSearch} required/>
                 <button type="submit" className="searchform__button"/>
             </form>
-            <FilterCheckBox/>
+            <FilterCheckBox
+                onInputClick={onInputClick}
+            />
         </section>
     );
 }

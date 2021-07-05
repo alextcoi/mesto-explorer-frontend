@@ -11,7 +11,14 @@ function Form (props) {
                 <Logo/>
                 <h2 className="form__title">{props.title}</h2>
                 {props.children}
-                <button type="submit" className={`form__button ${props.buttonClass}`}>{props.buttonTitle}</button>
+                <button type="submit" disabled={props.buttonState} className={`form__button ${props.buttonClass} ${props.buttonState ? 'form__button_disabled' : ''}`}>{props.buttonTitle}</button>
+                <p className={`form__error ${props.error ? "form__error_visible" : "form__error_hidden"}`}>{
+                    location.pathname === "/signup"
+                    ? "Упс! Такой пользователь уже есть"
+                    : location.pathname === "/signin"
+                    ? "Неверный email или пароль"
+                    : "Хм. Что-то пошло не так"
+                }</p>
                 <div className="form__text">
                     {props.text}
                     <Link to={

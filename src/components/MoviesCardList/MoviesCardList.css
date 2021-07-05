@@ -74,3 +74,18 @@
     background-color: #EE3465;
     cursor: pointer;
 }
+
+.moviescardlist__more_hidden {
+    display: none;
+}
+
+.moviescardlist__null {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
