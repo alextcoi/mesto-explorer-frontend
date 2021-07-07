@@ -12,7 +12,6 @@ class MainApi {
     signup(fullName, email, password) {
         return fetch(`${this._baseUrl}/signup`, {
             method: 'POST',
-            credentials: 'include',
             headers: {
                 "Content-Type": "application/json"
             },
@@ -29,7 +28,6 @@ class MainApi {
     signin(email, password) {
         return fetch(`${this._baseUrl}/signin`, {
             method: 'POST',
-            credentials: 'include',
             headers: {
               'Content-Type': 'application/json'
             },
@@ -127,9 +125,9 @@ class MainApi {
     }
 }
 
-const mainApi = new MainApi('http://localhost:3000');
+const mainApi = new MainApi('https://api.tcoi.nomoredomains.icu');
 
 export default mainApi;
 
 // https://api.tcoi.nomoredomains.icu
-// http://localhost:3001
+// http://localhost:3000

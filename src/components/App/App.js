@@ -50,15 +50,22 @@ function App() {
   };
 
   useEffect(() => {
-    moviesApi
-      .getMovies()
-      .then((res) => {
-          localStorage.setItem('movies', JSON.stringify(res));
-          setMovies(JSON.parse(localStorage.getItem('movies') || "[]"));
-      })
-      .catch((err) => {
-          console.log(err);
-      })
+    if (!localStorage.getItem('movies')) {
+      const data = JSON.parse(localStorage.getItem('movies'));
+      if (data) {
+        moviesApi
+          .getMovies()
+          .then((res) => {
+              localStorage.setItem('movies', JSON.stringify(res));
+              setMovies(JSON.parse(localStorage.getItem('movies') || "[]"));
+          })
+          .catch((err) => {
+              console.log(err);
+          })
+      }
+    } else {
+      setMovies(JSON.parse(localStorage.getItem('movies') || "[]"));
+    }
   }, []);
 
   useEffect(() => {
