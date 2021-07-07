@@ -51,18 +51,16 @@ function App() {
 
   useEffect(() => {
     if (!localStorage.getItem('movies')) {
-      const data = JSON.parse(localStorage.getItem('movies'));
-      if (data) {
         moviesApi
           .getMovies()
           .then((res) => {
+              console.log('check')
               localStorage.setItem('movies', JSON.stringify(res));
               setMovies(JSON.parse(localStorage.getItem('movies') || "[]"));
           })
           .catch((err) => {
               console.log(err);
           })
-      }
     } else {
       setMovies(JSON.parse(localStorage.getItem('movies') || "[]"));
     }
