@@ -33,8 +33,16 @@ function SavedMovies({ onUpdate }) {
         }, 1000)
     }, [userData]);
 
+    useEffect(() => {
+        if (localStorage.getItem('moviesave')) {
+            const search = JSON.parse(localStorage.getItem('moviesave'));
+            setSavedMovie(search);
+        }
+    }, []);
+
     function handleMovieSearch(movie) {
         setSavedMovie(movie);
+        localStorage.setItem('moviesave', JSON.stringify(movie));
     }
 
     function handleInputCheck() {
@@ -57,6 +65,7 @@ function SavedMovies({ onUpdate }) {
     return (
         <section className="movies">
             <SearchForm
+                searchWord={savedMovie.movie}
                 onMovieSearch={handleMovieSearch}
                 onInputClick={handleInputCheck}
             />

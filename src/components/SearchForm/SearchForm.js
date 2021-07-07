@@ -1,9 +1,15 @@
 import './SearchForm.css';
 import FilterCheckBox from '../FilterCheckBox/FilterCheckBox';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-function SearchForm({onMovieSearch, onInputClick}) {
+function SearchForm({onMovieSearch, onInputClick, searchWord}) {
     const [search, setSearch] = useState('');
+
+    useEffect(() => {
+        if (searchWord) {
+            setSearch(searchWord);
+        }
+    }, [searchWord]);
 
     function handleSearch(e) {
         setSearch(e.target.value);
