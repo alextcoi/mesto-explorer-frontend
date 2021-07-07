@@ -1,0 +1,189 @@
+.form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #202020
+}
+
+@media screen and (min-width: 320px) {
+    .form__container {
+        margin: 56px auto 30px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 260px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .form__container {
+        margin: 70px auto;
+        align-items: flex-start;
+        width: 396px;
+    }
+}
+
+.form__title {
+    margin: 40px 0 20px;
+    padding: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.form__input-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #8B8B8B;
+    margin: 20px 0 0;
+    align-self: flex-start;
+}
+
+@media screen and (min-width: 320px) {
+    .form__input {
+        margin: 10px 0 0;
+        padding: 15px;
+        background-color: #2F2F2F;
+        border-radius: 8px;
+        width: 230px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #FFFFFF;
+        border: none; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .form__input {
+        width: 366px;
+    }
+}
+
+.form__input:focus {
+    outline: none;
+    border: 1px solid #3DDC84;
+}
+
+.form__error {
+    margin: 10px 0 0;
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;  
+    color: #EE3465;
+}
+
+@media screen and (min-width: 320px) {
+    .form__button {
+        width: 260px;
+        padding: 15px 0;
+        background-color: #4285F4;
+        border-radius: 3px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        border: none;
+        color: #FFFFFF;
+    }
+
+    .form__button_login {
+        margin: 267px 0 0;
+        opacity: 1;
+        transition: opacity .5s ease-out;
+    }
+
+    .form__button_register {
+        margin: 179px 0 0;
+        opacity: 1;
+        transition: opacity .5s ease-out;
+    }
+
+    .form__button_login:hover {
+        opacity: .6;
+        cursor: pointer;
+    }
+
+    .form__button_register:hover {
+        opacity: .6;
+        cursor: pointer;
+    }
+
+    .form__button_disabled {
+        background-color: #F8F8F8;
+        color: #C2C2C2;
+    }
+
+    .form__button_disabled:hover {
+        cursor: not-allowed;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .form__button {
+        width: 396px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .form__button_login {
+        margin: 179px 0 0;
+    }
+
+    .form__button_register {
+        margin: 91px 0 0;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .form__text {
+        width: 100%;
+        margin: 14px 0 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #8B8B8B;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .form__text {
+        margin: 16px 0 0;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.form__text-link {
+    text-decoration: none;
+    color: #4285F4;
+    opacity: 1;
+    transition: opacity .5s ease-out;
+}
+
+.form__text-link:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+
+.form__error_visible {
+    display: block;
+    text-align: center;
+}
+
+.form__error_hidden {
+    display: none;
+}

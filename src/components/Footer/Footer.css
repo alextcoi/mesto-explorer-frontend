@@ -1,0 +1,122 @@
+@media screen and (min-width: 320px) {
+    .footer {
+        flex-direction: column;
+        margin: 0;
+        padding: 79px 10px 10px;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        margin: 0;
+        padding: 59px 70px 20px;
+    }
+}
+
+.footer_hidden {
+    display: none;
+}
+
+.footer_visible {
+    display: flex;
+}
+
+.footer__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #8B8B8B;
+    border-bottom: 1px solid #424242;
+    padding: 20px 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 320px) {
+    .footer__container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin: 30px 0 0 0;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer__container {
+        flex-direction: row;
+        margin: 20px 0 0 0;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .footer__date {
+        margin: 30px auto 0;
+        padding: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #8B8B8B;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer__date {
+        margin: 0;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .footer__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer__list {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .footer__element {
+        text-align: center;
+        margin: 0 0 12px 0;
+        text-decoration: none;
+        padding: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: white;
+        transition: opacity .5s ease-out;
+    }
+
+    .footer__element:last-of-type {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer__element {
+        margin: 0 0 0 20px;
+    }
+
+    .footer__element:last-of-type {
+        margin: 0 0 0 20px;
+    }
+}
+
+.footer__element:hover {
+    opacity: .6;
+    cursor: pointer;
+}
