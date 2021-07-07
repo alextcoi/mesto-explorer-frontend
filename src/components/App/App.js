@@ -54,7 +54,6 @@ function App() {
         moviesApi
           .getMovies()
           .then((res) => {
-              console.log('check')
               localStorage.setItem('movies', JSON.stringify(res));
               setMovies(JSON.parse(localStorage.getItem('movies') || "[]"));
           })
